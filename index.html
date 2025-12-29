@@ -80,7 +80,7 @@
 		</script>
 	</head>
 	<body onload="loaded();">
-		<form method="post" action="https://niles.xyz:4000/render.pyhtml" enctype="multipart/form-data" name="form">
+		<form method="post" action="https://2bit.niles.xyz/render.pyhtml" enctype="multipart/form-data" name="form">
 			File: <br />
 			<div class="input">
 				<input type="file" name="file" />
@@ -122,7 +122,7 @@
 			</div>
 			<br />
 			<br />
-			<input id="submit" type="submit" name="submit" value="Render" onclick='this.value = "Please wait, this will take a while"; this.disabled = true' />
+			<input id="submit_" type="submit" name="submit_" value="Render" onclick='this.value = "Please wait, this will take a while"; this.disabled = true; this.parentElement.submit()' />
 		</form>
 		<br />
 		The only precomputed values for dither and non-random dither are none, 15%, 50% and auto, and none, 7px, 10px and auto respectively

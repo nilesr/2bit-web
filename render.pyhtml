@@ -50,11 +50,11 @@
 			render = "nonrandom dither requires dither"
 	if not render:
 		inf = subprocess.check_output(["mktemp", "/tmp/2bit.XXXXXXXXX"]).decode("utf-8").strip()
-		inf_o = open(inf, "w")
+		inf_o = open(inf, "wb")
 		inf_o.write(f)
 		inf_o.close()
 		outf = inf + ".png"
-		prog = ["python3", "/opt/2bit.py", inf, outf, str(bits)]
+		prog = ["python3", "/opt/2bit/2bit.py", inf, outf, str(bits)]
 		if percolor:
 			prog.append("--per-color")
 		if dither:
